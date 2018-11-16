@@ -1,3 +1,7 @@
 # Logs Analysis Project
 
-### By Kavya Avvari
+### by Kavya Avvari
+
+## Introduction
+
+This project is part of udacity's Full Stack Nanodegree course. 
