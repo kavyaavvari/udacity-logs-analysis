@@ -1,1 +1,1 @@
-# udacity-logs-analysis
+# Logs Analysis Project
