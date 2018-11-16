@@ -2,6 +2,4 @@
 
 ### by Kavya Avvari
 
-## Introduction
-
-This project is part of udacity's Full Stack Nanodegree course. 
+This project is part of Udacity's Full Stack Nanodegree course. 
