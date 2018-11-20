@@ -8,3 +8,13 @@ cursor.execute("select articles.title, count(*) as new from articles left join l
 results = cursor.fetchall()
 print(results)
 db.close()
+
+
+print('The most popular article authors of all time:')
+
+cursor = db.cursor()
+cursor.execute("select authors.name, count(*) as views from articles, authors, log where  concat('/article/',articles.slug) = log.path and articles.author = authors.id  group by authors.name order by views desc")
+results = cursor.fetchall()
+print(results)
+
+db.close()
