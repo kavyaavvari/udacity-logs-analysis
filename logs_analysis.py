@@ -17,6 +17,7 @@ cursor.execute("select authors.name, count(*) as views from articles, authors, l
 results = cursor.fetchall()
 print(results)
 
+
 print('Days with more than 1% of requests leading to errors:')
 
 cursor = db.cursor()
