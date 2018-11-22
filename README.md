@@ -20,5 +20,11 @@ These three questions will be answered by writing a query for each question.
 The following software should be installed in order to run the program. 
 
 1. Python3
-2. Vagrant Vagrant
+2. Vagrant 
 3. VirtualBox
+
+### Project Setup
+
+1. Download the tools Vagrant and VirtualBox so that you can install and run the virtual machine. (VirtualBox is a software that runs the virtual machine and Vagrant is a software that lets you configure the virtual machine.)
+2. Download the data newsdata.sql
+3. To load the data, cd into the vagrant directory and use the command psql -d news -f newsdata.sql 
