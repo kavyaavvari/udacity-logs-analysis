@@ -39,7 +39,7 @@ To launch the VM:
 
 ## Running the Reporting Tool
 
-```python3 logs_analysis_tool.py``` to run the reporting tool 
+```python3 logs_analysis.py``` to run the reporting tool 
 
 
 
