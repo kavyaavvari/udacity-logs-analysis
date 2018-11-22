@@ -13,3 +13,12 @@ You will build an internal reporting tool for a ficticious newspaper site. The r
 3. On which days did more than 1% of requests lead to errors?
 
 These three questions will be answered by writing a query for each question.
+
+
+## Required Software 
+
+The following software should be installed in order to run the program. 
+
+1. Python3
+2. Vagrant Vagrant
+3. VirtualBox
