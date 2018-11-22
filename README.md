@@ -32,5 +32,9 @@ The following software should be installed in order to run the program.
 
 ### Launching the VM 
 
+To launch the VM:
+
+1. ```cd``` into the vagrant directory and run the command ```vagrant up```
+2. Run ```vagrant ssh``` to log into the vagrant directory
 
 
