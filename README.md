@@ -37,4 +37,10 @@ To launch the VM:
 1. ```cd``` into the vagrant directory and run the command ```vagrant up```
 2. To log into the virtual machine, run ```vagrant ssh``` 
 
+## Running the Reporting Tool
+
+```python3 logs_analysis_tool.py``` to run the reporting tool 
+
+
+
 
