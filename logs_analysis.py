@@ -17,11 +17,6 @@ query_1 = ("SELECT articles.title"
            "ORDER BY new DESC" 
            "LIMIT 3")
 
-results = cursor.fetchall()
-print(results)
-
-write_text("output.txt", results)
-
 
 question_2 = "The most popular article authors of all time:"
 
@@ -32,11 +27,6 @@ quergy_2 = ("SELECT authors.name"
             "AND articles.author = authors.id"  
             "GROUP BY authors.name" 
             "ORDER BY views DESC")
-
-results = cursor.fetchall()
-print(results)
-
-write_text("output.txt", results)
 
 
 question_3 = "Days where more than 1% of requests lead to errors:"
