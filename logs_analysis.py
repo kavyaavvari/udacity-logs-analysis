@@ -17,4 +17,11 @@ cursor.execute("select authors.name, count(*) as views from articles, authors, l
 results = cursor.fetchall()
 print(results)
 
+print('Days with more than 1% of requests leading to errors:')
+
+cursor = db.cursor()
+cursor.execute("with date_percentage as (with date_status as (select to_char(time,'DD-MON-YYYY') as date, status from log) select date, sum(case when status = '404 NOT FOUND' then 1.0 else 0 end)/count(date)*100 as percent from date_status group by date) select * from date_percentage where percent > '1.0'")
+results = cursor.fetchall()
+print(results)
+
 db.close()
