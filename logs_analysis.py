@@ -1,12 +1,21 @@
 import psycopg2
 
+
 DBNAME = "news"
+
 
 def write_text(file_name, text):
     with open(file_name,"a+") as f:
         f.write(str(text))
 
-
+        
+def get_results(query):
+    db = psycopg2.connect("dbname=news")
+    cursor = db.cursor()
+    cursor.execute(query)
+    results = cursor.fetchall()
+    db.close()
+    
 
 question_1 = "The most popular three articles of all time:"
 
@@ -37,14 +46,6 @@ query_3 = ("WITH date_percentage"
            "FROM date_status GROUP BY date)" 
            "SELECT * FROM date_percentage" 
            "WHERE percent > '1.0'")
-
-
-def get_results(query):
-    db = psycopg2.connect("dbname=news")
-    cursor = db.cursor()
-    cursor.execute(query)
-    results = cursor.fetchall()
-    db.close()
    
 
 answer_1 = get_results(query_1)
