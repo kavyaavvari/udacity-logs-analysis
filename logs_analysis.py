@@ -37,8 +37,12 @@ query_3 = ("WITH date_percentage"
            "FROM date_status GROUP BY date)" 
            "SELECT * FROM date_percentage" 
            "WHERE percent > '1.0'")
-results = cursor.fetchall()
-print(results)
-db.close()
+
+def get_results(query):
+    db = psycopg2.connect("dbname=news")
+    cursor = db.cursor()
+    cursor.execute(query)
+    results = cursor.fetchall()
+    db.close()
 
 write_text("output.txt", results)
