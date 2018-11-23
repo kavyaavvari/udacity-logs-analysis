@@ -12,8 +12,8 @@ question_1 = "The most popular three articles of all time:"
 
 query_1 = ("SELECT articles.title" 
            "COUNT(*) AS new FROM articles" 
-           "left JOIN log on concat('/article/',articles.slug) = log.path group" 
-           "BY articles.title" 
+           "left JOIN log on concat('/article/',articles.slug) = log.path" 
+           "GROUP BY articles.title" 
            "ORDER BY new DESC" 
            "LIMIT 3")
 
