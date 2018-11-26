@@ -58,7 +58,8 @@ query_1 = ("SELECT articles.title, "
            "COUNT(*) AS new FROM articles "
            "left JOIN log on concat('/article/',articles.slug) = log.path "
            "GROUP BY articles.title "
-           "ORDER BY new DESC ")
+           "ORDER BY new DESC "
+           "LIMIT 3")
 
 question_2 = "The most popular article authors of all time:"
 
